@@ -24,54 +24,39 @@
 html{font-size:16px;-webkit-font-smoothing:antialiased}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
 
-/* ── Top Bar ───────────────────────────────── */
-.topbar{
-  background:var(--navy);
-  padding:14px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-}
-.topbar img{width:28px;height:28px;filter:invert(1)}
-.topbar .site-name{
-  color:#fff;
-  font-size:.92rem;
-  font-weight:700;
-  letter-spacing:.02em;
-}
-
-/* ── Header / Hero ─────────────────────────── */
+/* ── Hero ──────────────────────────────────── */
 .hero{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
-  padding:48px 24px 52px;
+  background:var(--navy);
+  padding:44px 24px 56px;
   text-align:center;
   color:#fff;
 }
+.hero-logo{
+  width:52px;height:52px;
+  filter:invert(1);
+  margin-bottom:16px;
+}
 .hero h1{
-  font-size:2rem;
+  font-size:1.8rem;
   font-weight:800;
   letter-spacing:-.02em;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .hero .subtitle{
   color:#94a3b8;
-  font-size:.95rem;
-  margin-bottom:20px;
+  font-size:.9rem;
+  margin-bottom:16px;
 }
 .trust-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  padding:6px 14px;
+  display:inline-block;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  padding:5px 14px;
   border-radius:20px;
-  font-size:.78rem;
-  color:#cbd5e1;
+  font-size:.73rem;
+  color:#64748b;
   font-weight:500;
 }
-.trust-badge svg{width:14px;height:14px;color:var(--green)}
 
 /* ── Layout ────────────────────────────────── */
 .layout{
