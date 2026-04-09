@@ -14,12 +14,18 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="header-logo">
-    <img src="/logo.svg" alt="AddressLine1" width="70" height="70">
-    <h1>영문주소 변환기</h1>
-  </div>
+<nav class="topbar">
+  <img src="/logo.svg" alt="AddressLine1">
+  <span class="site-name">AddressLine1</span>
+</nav>
+
+<header class="hero">
+  <h1>영문주소 변환기</h1>
   <p class="subtitle">한글 주소를 입력하면 해외 사이트 주소 폼에 뭘 적어야 하는지 바로 알려드립니다</p>
+  <div class="trust-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    행정안전부 도로명주소 공식 API 기반
+  </div>
 </header>
 
 <main class="layout">
@@ -143,7 +149,8 @@
 </section>
 
 <footer class="footer">
-  <p>주소 데이터: 행정안전부 도로명주소 안내시스템</p>
+  <p><strong>AddressLine1</strong> — 영문주소 변환 서비스</p>
+  <p>주소 데이터: 행정안전부 도로명주소 안내시스템 (juso.go.kr)</p>
 </footer>
 
 <div id="toast" class="toast">복사되었습니다</div>
