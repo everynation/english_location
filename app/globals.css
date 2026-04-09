@@ -356,6 +356,58 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 }
 .fade-up{animation:fadeUp .35s ease}
 
+/* ── Blog ──────────────────────────────────── */
+.blog-nav{
+  background:var(--navy);padding:14px 24px;
+  display:flex;align-items:center;justify-content:center;
+}
+.blog-nav a{
+  display:flex;align-items:center;gap:8px;
+  color:#fff;text-decoration:none;font-size:.9rem;font-weight:700;
+}
+.blog-nav img{filter:invert(1)}
+
+.blog-index{
+  max-width:680px;margin:0 auto;padding:48px 20px 64px;
+}
+.blog-index h1{font-size:1.6rem;font-weight:800;margin-bottom:6px}
+.blog-index-desc{color:var(--text2);font-size:.9rem;margin-bottom:32px}
+.blog-empty{color:var(--text3);font-size:.9rem}
+
+.blog-list{list-style:none}
+.blog-list li{border-bottom:1px solid var(--border)}
+.blog-list a{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 4px;text-decoration:none;
+  transition:background .15s;
+}
+.blog-list a:hover{background:#f8fafc}
+.blog-list-title{font-size:.95rem;font-weight:600;color:var(--text)}
+.blog-list time{font-size:.78rem;color:var(--text3);flex-shrink:0}
+
+.blog-back{margin-top:32px}
+.blog-back a{color:var(--blue);text-decoration:none;font-size:.88rem;font-weight:500}
+
+.blog-article{
+  max-width:680px;margin:0 auto;padding:48px 20px 64px;
+}
+.blog-article time{font-size:.78rem;color:var(--text3)}
+.blog-article h1{font-size:1.5rem;font-weight:800;margin:8px 0 28px;line-height:1.4}
+.blog-article-body{color:var(--text2);font-size:.95rem;line-height:1.85}
+.blog-article-body h2{font-size:1.15rem;font-weight:700;color:var(--text);margin:32px 0 12px}
+.blog-article-body h3{font-size:1rem;font-weight:600;color:var(--text);margin:24px 0 8px}
+.blog-article-body p{margin-bottom:16px}
+.blog-article-body ul,.blog-article-body ol{margin:0 0 16px 20px}
+.blog-article-body li{margin-bottom:6px}
+.blog-article-body a{color:var(--blue);text-decoration:none;font-weight:500}
+.blog-article-body a:hover{text-decoration:underline}
+.blog-article-footer{
+  margin-top:40px;padding-top:20px;border-top:1px solid var(--border);
+  display:flex;gap:16px;
+}
+.blog-article-footer a{color:var(--text3);text-decoration:none;font-size:.86rem}
+.blog-article-footer a:hover{color:var(--text)}
+
 /* ── Responsive ────────────────────────────── */
 @media(max-width:800px){
   .hero h1{font-size:1.5rem}
