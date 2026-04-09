@@ -4,16 +4,17 @@ const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
-const JUSO_API_KEY = process.env.JUSO_API_KEY;
+const JUSO_SEARCH_KEY = process.env.JUSO_SEARCH_KEY;
+const JUSO_ENG_KEY = process.env.JUSO_ENG_KEY;
 
 // 한글 주소 검색 프록시
 app.get('/api/search', async (req, res) => {
   const { keyword, page = 1 } = req.query;
   if (!keyword) return res.status(400).json({ error: '검색어를 입력하세요' });
-  if (!JUSO_API_KEY) return res.status(500).json({ error: 'API 키가 설정되지 않았습니다' });
+  if (!JUSO_SEARCH_KEY) return res.status(500).json({ error: 'API 키가 설정되지 않았습니다' });
 
   try {
-    const url = `https://business.juso.go.kr/addrlink/addrLinkApi.do?confmKey=${JUSO_API_KEY}&currentPage=${page}&countPerPage=10&keyword=${encodeURIComponent(keyword)}&resultType=json`;
+    const url = `https://business.juso.go.kr/addrlink/addrLinkApi.do?confmKey=${JUSO_SEARCH_KEY}&currentPage=${page}&countPerPage=10&keyword=${encodeURIComponent(keyword)}&resultType=json`;
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);
@@ -26,10 +27,10 @@ app.get('/api/search', async (req, res) => {
 app.get('/api/english', async (req, res) => {
   const { keyword, page = 1 } = req.query;
   if (!keyword) return res.status(400).json({ error: '검색어를 입력하세요' });
-  if (!JUSO_API_KEY) return res.status(500).json({ error: 'API 키가 설정되지 않았습니다' });
+  if (!JUSO_ENG_KEY) return res.status(500).json({ error: 'API 키가 설정되지 않았습니다' });
 
   try {
-    const url = `https://business.juso.go.kr/addrlink/addrEngApi.do?confmKey=${JUSO_API_KEY}&currentPage=${page}&countPerPage=10&keyword=${encodeURIComponent(keyword)}&resultType=json`;
+    const url = `https://business.juso.go.kr/addrlink/addrEngApi.do?confmKey=${JUSO_ENG_KEY}&currentPage=${page}&countPerPage=10&keyword=${encodeURIComponent(keyword)}&resultType=json`;
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);
