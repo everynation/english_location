@@ -1,13 +1,20 @@
 {
-  "name": "english-location",
+  "name": "addressline1",
   "version": "1.0.0",
-  "description": "한글 주소를 영문 주소로 변환하는 서비스",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "express": "^4.21.0"
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "@types/react": "^19.1.2",
+    "typescript": "^5.8.3"
   }
 }
