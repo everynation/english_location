@@ -247,7 +247,14 @@ function processLinks(text: string): string {
 }
 
 function esc(text: string): string {
-  return text.replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;")
+    .replace(/\{/g, "&#123;")
+    .replace(/\}/g, "&#125;");
 }
 
 function generatePageTsx(title: string, slug: string, category: string, jsxBody: string): string {
