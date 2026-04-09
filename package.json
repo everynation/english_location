@@ -1,0 +1,13 @@
+{
+  "name": "english-location",
+  "version": "1.0.0",
+  "description": "한글 주소를 영문 주소로 변환하는 서비스",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
