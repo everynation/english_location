@@ -28,12 +28,16 @@ const INTERVAL_MS = 48 * 60 * 60 * 1000;
 const CHECK_INTERVAL_MS = 4 * 60 * 60 * 1000;
 const REFRESH_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000;
 
+// 경쟁 사이트: jusoen.com, epost.kr (우체국 우편번호검색)
+const COMPETITORS = "jusoen.com (영문주소변환), epost.kr (우체국 우편번호검색)";
+
 const SEED_CATEGORIES = [
-  "Address Line 1/2 뜻과 작성법",
-  "해외 직구 주소 입력 가이드 (Amazon, eBay, iHerb, 알리익스프레스)",
-  "해외 서비스 가입 주소 입력 (PayPal, Netflix, Apple, Nike)",
-  "영문주소 일반 (로마자 표기법, 도로명/지번, 우편번호)",
-  "해외 배송/통관 주소 관련 팁",
+  "Address Line 1/2 뜻과 작성법 (Do Si, City, Postal Code 포함)",
+  "해외 직구 주소 입력 가이드 (Amazon, eBay, iHerb, 알리익스프레스, 쿠팡 직구)",
+  "해외 서비스 가입 주소 입력 (PayPal, Netflix, Apple, Nike, Steam)",
+  "영문주소 일반 (로마자 표기법, 도로명/지번 차이, 우편번호, 영문주소변환)",
+  "해외 배송/통관 주소 관련 팁 (배대지, 관세, 개인통관부호)",
+  "jusoen.com/epost.kr 비교 및 대안 (영문주소 변환 사이트 비교)",
 ];
 
 function getExistingSlugs(): string[] {
@@ -91,7 +95,7 @@ async function pickTopic(existingSlugs: string[], gscReport?: GSCReport | null):
   const response = await callLLMWithRetry(`
 너는 addressline1.com SEO 블로그 전략가다.
 
-목표: "영문주소 변환", "address line 1", "해외직구 주소" 키워드 1위
+목표: "영문주소 변환", "address line 1", "해외직구 주소" 키워드에서 ${COMPETITORS}를 이기고 1위 차지
 
 이번 카테고리: ${targetCategory}
 
