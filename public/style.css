@@ -23,6 +23,8 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 
 /* ── Header ────────────────────────────────── */
 .header{text-align:center;padding:48px 20px 12px}
+.header-logo{display:flex;align-items:center;justify-content:center;gap:10px}
+.header-logo img{width:40px;height:40px}
 .header h1{font-size:1.8rem;font-weight:800;letter-spacing:-.02em}
 .subtitle{margin-top:8px;color:var(--text2);font-size:.92rem}
 
