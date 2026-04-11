@@ -182,7 +182,6 @@ export default function Home() {
         <div className="col-preview" ref={previewRef}>
           <p className="col-label">해외 사이트에서 이렇게 보입니다</p>
           <div className="form-card">
-            <div className="form-card-header">Edit address</div>
             {fields.map(({ key, label, chevron }) => (
               <div key={key} className={`pf${highlightField === key ? ' highlight' : ''}`}>
                 <span className="pf-label">{label}</span>

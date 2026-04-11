@@ -86,18 +86,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 .form-card{
   background:var(--surface);
   border-radius:20px;
-  padding:0 0 8px;
+  padding:8px 0;
   box-shadow:var(--shadow-lg);
   overflow:hidden;
   border:1px solid var(--border);
-}
-.form-card-header{
-  text-align:center;
-  font-size:1rem;
-  font-weight:700;
-  padding:18px 24px 14px;
-  border-bottom:1px solid var(--border);
-  color:var(--text);
 }
 
 /* ── Preview Field ─────────────────────────── */
@@ -417,4 +409,15 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
   .col-preview{position:static}
   .guide-grid{grid-template-columns:1fr}
   .search-bar{flex-direction:column}
+  .col-label{
+    text-align:center;
+    font-size:.82rem;
+    padding:8px 0;
+    margin:0 0 12px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--surface);
+    color:var(--text2);
+    letter-spacing:.04em;
+  }
 }
